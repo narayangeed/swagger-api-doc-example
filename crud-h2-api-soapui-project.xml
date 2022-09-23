@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="03d30887-8446-434e-9560-ebb170373ca0" activeEnvironment="Default" name="crud-h2-api" resourceRoot="" soapui-version="5.7.0" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:RestService" id="c48fa89c-726e-400d-9f54-d4a2178b7d7e" wadlVersion="http://wadl.dev.java.net/2009/02" name="http://localhost:9091" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache/><con:endpoints><con:endpoint>http://localhost:9091</con:endpoint></con:endpoints><con:resource name="/" path="/crud-h2-api/rest/" id="44c4341f-8b6b-4659-ba7e-5ee220fff186"><con:settings/><con:parameters/><con:resource name="getEmployeeById" path="getEmployeeById/{id}" id="bc703627-1899-463f-829f-449bda7b3680"><con:settings/><con:parameters><con:parameter><con:name>id</con:name><con:value>id</con:value><con:style>TEMPLATE</con:style><con:default>id</con:default></con:parameter></con:parameters><con:method name="Method 1" id="23c6c645-d0e3-4a7c-a36f-d8705a7ae6da" method="GET"><con:settings/><con:parameters/><con:representation type="FAULT"><con:mediaType>application/json</con:mediaType><con:status>404</con:status><con:params/><con:element xmlns:ns="http://localhost/crud-h2-api/rest/addEmployee/getEmployeeById/0">ns:Fault</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType>application/json</con:mediaType><con:status>200</con:status><con:params/><con:element xmlns:ns="http://localhost/crud-h2-api/rest/addEmployee/getEmployeeById/0">ns:Response</con:element></con:representation><con:request name="getEmployeeById" id="391dc8d2-6ab7-400e-bbcb-bcc50901b384" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://localhost:9091</con:endpoint><con:request/><con:originalUri>http://localhost/crud-h2-api/rest/addEmployee/getEmployeeById/0</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters><entry key="id" value="0" xmlns="http://eviware.com/soapui/config"/></con:parameters></con:request></con:method></con:resource><con:resource name="addEmployee" path="addEmployee" id="fce3097d-406e-462d-b786-2ef08b75d24a"><con:settings/><con:parameters/><con:method name="Method 1" id="82408c9f-8793-4470-9de2-1bd61da4e2fc" method="POST"><con:settings/><con:parameters/><con:representation type="RESPONSE"><con:mediaType>application/json</con:mediaType><con:status>201</con:status><con:params/><con:element xmlns:add="http://localhost/crud-h2-api/rest/addEmployee">add:Response</con:element></con:representation><con:representation type="REQUEST"><con:mediaType>application/json</con:mediaType><con:params/></con:representation><con:request name="addEmployee" id="c0acbec9-e24a-4135-bce9-655cadfbe16f" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://localhost:9091</con:endpoint><con:request>{
+  "address": {
+    "city": "Katangi",
+    "country": "India",
+    "state": "M.P.",
+    "zip": "481445"
+  },
+  "departments": [
+    {
+      "code": "IT",
+      "name": "IT"
+    }
+  ],
+  "employeeId": 1,
+  "gender": "M",
+  "name": "Narayan Geed",
+  "salary": 1000
+}</con:request><con:originalUri>http://localhost/crud-h2-api/rest/addEmployee</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request></con:method></con:resource><con:resource name="addEmployees" path="addEmployees" id="fce3097d-406e-462d-b786-2ef08b75d24a"><con:settings/><con:parameters/><con:method name="Method 1" id="82408c9f-8793-4470-9de2-1bd61da4e2fc" method="POST"><con:settings/><con:parameters/><con:representation type="REQUEST"><con:mediaType>application/json</con:mediaType><con:params/></con:representation><con:representation type="RESPONSE"><con:mediaType>text/plain;charset=UTF-8</con:mediaType><con:status>200</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="FAULT"><con:mediaType>application/json</con:mediaType><con:status>400 500</con:status><con:params/><con:element xmlns:add="http://localhost/crud-h2-api/rest/addEmployee">add:Fault</con:element></con:representation><con:request name="addEmployees" id="c0acbec9-e24a-4135-bce9-655cadfbe16f" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://localhost:9091</con:endpoint><con:request>[{
+  "address": {
+    "city": "Katangi",
+    "country": "India",
+    "state": "M.P.",
+    "zip": "481445"
+  },
+  "departments": [
+    {
+      "code": "IT",
+      "name": "IT"
+    }
+  ],
+  "employeeId": 3,
+  "gender": "M",
+  "name": "Narayan Geed",
+  "salary": 1000
+},
+{
+  "address": {
+    "city": "Katangi",
+    "country": "India",
+    "state": "M.P.",
+    "zip": "481445"
+  },
+  "departments": [
+    {
+      "code": "IT",
+      "name": "IT"
+    }
+  ],
+  "employeeId": 2,
+  "gender": "M",
+  "name": "Narayan Geed",
+  "salary": 1000
+}
+]</con:request><con:originalUri>http://localhost/crud-h2-api/rest/addEmployee</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request></con:method></con:resource><con:resource name="getAllEmployees" path="getAllEmployees" id="fce3097d-406e-462d-b786-2ef08b75d24a"><con:settings/><con:parameters/><con:method name="Method 1" id="82408c9f-8793-4470-9de2-1bd61da4e2fc" method="GET"><con:settings/><con:parameters/><con:representation type="REQUEST"><con:mediaType>application/json</con:mediaType><con:params/></con:representation><con:representation type="RESPONSE"><con:mediaType>text/plain;charset=UTF-8</con:mediaType><con:status>200</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="FAULT"><con:mediaType>application/json</con:mediaType><con:status>400 500 405</con:status><con:params/><con:element xmlns:add="http://localhost/crud-h2-api/rest/addEmployee">add:Fault</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType>application/json</con:mediaType><con:status>200</con:status><con:params/><con:element>Response</con:element></con:representation><con:representation type="FAULT"><con:mediaType>text/plain;charset=UTF-8</con:mediaType><con:status>404</con:status><con:params/><con:element>data</con:element></con:representation><con:request name="getAllEmployees" id="c0acbec9-e24a-4135-bce9-655cadfbe16f" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://localhost:9091</con:endpoint><con:request/><con:originalUri>http://localhost/crud-h2-api/rest/addEmployee</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request></con:method></con:resource></con:resource></con:interface><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/></con:soapui-project>
